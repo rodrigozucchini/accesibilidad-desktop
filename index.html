@@ -5,6 +5,8 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Mi Portafolio</title>
     <link href="styles.css" rel="stylesheet" />
+    <link rel="stylesheet" media="(max-width: 900px)"  href="./tablet.css">
+    <link rel="stylesheet" media="(max-width: 450px)" href="./phone.css">
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap"
       rel="stylesheet"
@@ -12,71 +14,91 @@
   </head>
 
   <body>
-    <div class="header-img"></div>
-    <div class="header">Juliana Gomez</div>
-    <div class="subtitle">Front End Developer</div>
-    <div class="navigation">
-      <div class="nav-item">Acerca de</div>
-      <div class="nav-item">Mis Proyectos</div>
-      <div class="nav-item">Contacto</div>
-    </div>
+    <a href="#main" class="skip-link">Saltar al contenido</a>
+    <header>
+      <img src="images/rodrigo.jpg" alt="foto de Rodrigo Zucchini" class="header-img"/>
+      <h1 class="header">Rodrigo Zucchini</h1>
+      <h2 class="subtitle">Front End Developer</h2>
+      <nav>
+        <ul class="navigation">
+          <li class="nav-item"><a href="/perfil">Perfil</a></li>
+          <li class="nav-item"><a href="/proyectos">Proyectos</a></li>
+          <li class="nav-item"><a href="/contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <div class="intro">
-      Hola! Soy Juliana 👋 Soy Colombo-Canadiense, amo los gatos y tambien crear
-      cosas lindas para la web 😍 Después de estudiar comunicación social y
-      ciencia política en la universidad, trabajé varios años en mercadeo
-      digital hasta que aprendí a programar. Llevo un poco más de tres años
-      enfocándome en front end, específicamente en JavaScript y accesibilidad.
-      Sueño con una web donde todo el mundo pueda participar. Aquí puedes ver
-      algunos de mis proyectos recientes y también puedes contactarme por si
-      quieres hablar de tecnología, accesibilidad o gatos!
-      <div class="social-media">
-        <div>
-          <a href="https://twitter.com/gmzjuliana" target="_blank"
-            ><img src="images/twitter.png"
-          /></a>
+    <main id="main">
+      <section>
+        <h2 class="header">Mi Perfil</h2>
+        <p class="intro">
+          Hola! Soy Rodrigo 👋 Soy Argentino, amo el deporte, la lectura y tambien crear
+          cosas lindas para la web 😍 Después de dedicarle toda mi infancia y adolescencia al deporte, decidí dar un cambio a mi vida.
+          Empece varías carreras universitarias y nada me llamaba la atención, hasta que conocí el mundo de la programación.
+          Gracias a la tecnología volví a soñar con poder hacer cosas increibles.
+          Tambien desperté en mi interior unas ganas de NUNCA PARAR DE APRENDER.
+          Sueño con una web donde todo el mundo pueda participar. Aquí puedes ver
+          algunos de mis proyectos recientes y también puedes contactarme por si
+          quieres hablar de tecnología!</p>
+        <ul class="social-media">
+          <li>
+            <a href="https://twitter.com/RodrigoZucchini" target="_blank"
+              ><img src="images/twitter.png" alt="twitter"/>
+              <p class="social-link-text">twitter</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/rodrigozucchini" target="_blank"
+              ><img src="images/github-logo.png" alt="github"/>
+              <p class="social-link-text">Github</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/rodrigo-angel-zucchini-109446212/" target="_blank"
+              ><img src="images/linkedin.png" alt="linkedin"/>
+              <p class="social-link-text">Linkedin</p>
+            </a>
+          </li>
+        </ul>
+      </section>
+      
+      <section>
+        <h2 class="header">Mis Proyectos</h2>
+      <div class="carousel">
+        <button class="arrow arrow-left" aria-label="backward button"></button>
+        <div class="window">
+          <ul class="project-container">
+            <li class="project1-container"><button class="project1 project"><img src="./images/project1.png" class="project-img" alt="Mi primer proyecto"/></button></li>
+            <li class="project2-container"><button class="project2 project"><img src="./images/project2.png" class="project-img" alt="Mi segundo proyecto"/></button></li>
+            <li class="project3-container"><button class="project3 project"><img src="./images/project3.png" class="project-img" alt="Mi tercer proyecto" /></button></li>
+            <li class="project4-container" aria-hidden="true"><button class="project4 project" tabindex="-1"><img src="./images/project4.png" class="project-img" alt="Mi cuarto proyecto"/></button></li>
+            <li class="project5-container" aria-hidden="true"><button class="project5 project" tabindex="-1"><img src="./images/project5.png" class="project-img" alt="Mi quinto proyecto"/></button></li>
+          </ul>
         </div>
-        <div>
-          <a href="https://github.com/gmzjuliana" target="_blank"
-            ><img src="images/github-logo.png"
-          /></a>
-        </div>
-        <div>
-          <a href="https://www.linkedin.com/in/gomezjuliana/" target="_blank"
-            ><img src="images/linkedin.png"
-          /></a>
-        </div>
+        <button class="arrow arrow-right" aria-label="forward button"></button>
       </div>
-    </div>
+    </section>
+    </main>
 
-    <div class="carousel">
-      <div class="arrow arrow-left"></div>
-      <div class="window">
-        <div class="project-container">
-          <div class="project project1"></div>
-          <div class="project project2"></div>
-          <div class="project project3"></div>
-          <div class="project project4"></div>
-          <div class="project project5"></div>
-        </div>
-      </div>
-      <div class="arrow arrow-right"></div>
-    </div>
+    <footer class="contact-section">
+      <h2 class="header">Contacto</h2>
+      <p class="intro">Para mandarme un mensaje puedes usar el formulario que sigue</p>
+      <form class="form-container">
+        <label class="form-label">Nombre</label><input type="text" aria-label="nombre" id="name"/>
+        <span id="name-error" aria-live="assertive"></span>
+        <br />
+        <label class="form-label">Correo</label><input type="text" aria-label="correo"/> <br />
+        <label class="message-input">Mensaje<input type="text" aria-label="Escribe un mensaje"/> <br /></label>
+        <button class="send-button">Enviar</button>
+      </form>
+    </footer>
 
-    <div class="contact-section">
-      <div class="header">Contacto</div>
-      <div class="form-container">
-        Nombre<input type="text" /> <br />
-        Correo<input type="text" /> <br />
-        <div class="message-input">Mensaje<input type="text" /> <br /></div>
-        <div class="send-button">Enviar</div>
-      </div>
-    </div>
-    <div class="notification">El formulario fue enviado sin errores</div>
+    <div class="notification" aria-live="assertive"></div>
     <div class="modal-container">
       <div class="modal">
-        Ejemplo de un proyecto mio
-        <div class="modal-project-image"></div>
+        <h2 class="header" id="modal-header" tabindex="0">Ejemplo de un proyecto mio</h2>
+        <img src="images/project1.png" class="modal-project-image" alt="un pantallazo de mi proyecto"/>
+        <button class="modal-button">Cerrar</button>
       </div>
     </div>
 
